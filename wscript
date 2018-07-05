@@ -97,7 +97,7 @@ def configure(conf):
     conf.check_sqlite3(mandatory=True)
     conf.check_openssl(mandatory=True, atleast_version=0x1000200f) # 1.0.2
 
-    USED_BOOST_LIBS = ['system', 'filesystem', 'date_time', 'iostreams',
+    USED_BOOST_LIBS = ['system', 'atomic', 'regex', 'filesystem', 'date_time', 'iostreams',
                        'program_options', 'chrono', 'thread', 'log', 'log_setup']
 
     if conf.env['WITH_TESTS']:
